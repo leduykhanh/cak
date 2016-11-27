@@ -342,6 +342,6 @@ $existing_risk_control=array(
 				"0" =>	"Use of traffic mannequin to slow others",
 				"0" =>	"Working personnel to put on reflective vest at all time",
 				"0" =>	"Put up the warning signs according to the road closure permit",
-	)
+	),
 	"other" => array()
 );
