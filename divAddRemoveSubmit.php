@@ -746,11 +746,7 @@ alert(attrName);
                                     <div class="col-sm-6">
 
                                         <label class="col-sm-6">Action Officer:</label>
-                                          <select name="actionOfficer[]"   class="col-sm-6" >
-                                            <option value="-">Select Action Officer</option>
-                                            <option value="name1">W. K. Chan</option>
-                                            <option value="name2">Liang Kan Fat</option>
-                                          </select>
+                                        <input type="text" name="actionOfficer[]"   class="col-sm-6" />
                                     </div>
                                      <button class="col-sm-1 btn btn-danger deleteActonOfficer" style="margin-left:20px;">Remove</button>
                                 </div>
@@ -977,11 +973,7 @@ alert(attrName);
                                     <div class="col-sm-6">
 
                                         <label class="col-sm-6">Action Officer:</label>
-                                        <select name="actionOfficer[]"   class="col-sm-6" >
-                                            <option value="-">Select Action Officer</option>
-                                            <option value="name1">W. K. Chan</option>
-                                            <option value="name2">Liang Kan Fat</option>
-                                        </select>
+                                        <input type="text" name="actionOfficer[]"   class="col-sm-6" />
                                     </div>
                                     <button class="col-sm-1 btn btn-danger deleteActonOfficer" style="margin-left:20px;">Remove</button>
                                 </div>
