@@ -342,7 +342,7 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
                         {
 
 
-					   echo $creationDate =  date('d-m-Y', strtotime('+'.$row["expiry_date"].' years', strtotime($row['approveDate'])));
+					   echo $creationDate =  date('d-m-Y', strtotime('+'.$row["expiry_date"].' years', strtotime($row['createdDate'])));
 						}
                         ?></td>
 
