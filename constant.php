@@ -26,15 +26,16 @@ $harzard = array(
 	"f_h"		=> "Fire Hazard",
 	"g_h"		=> "Gas Hazard",
 	"b_w" => "Bad Weather",
-	"w_u_q_t" => "Working/unloading with traffic",
+	"w_u_q_t" => "Working near traffic",
 	"r_d" => "Reckless driving",
 	"h_l_b_m_h" => "Heavy load by manual handling",
-	"m_o_u_g" => "material on uneven ground (collapsing)",
+	"m_o_u_g" => "material on uneven ground (unstable)",
 	"w_a_h_b" => "Working at height (using boomlift)",
 	"w_a_h_s" => "Working at height (using sisscor lift)",
 	"w_a_h_sf" => "Working at height (using scaffold)",
 	"p_p_f_l_o" => "Poor planning for lfting operation",
 	"f_p" => "Flying particles",
+	"w_a_h_t" => "Working around heavy traffic",
 	"other" => "Other"
 );
 $injury =array(
@@ -331,5 +332,16 @@ $existing_risk_control=array(
 				"4" =>	"Use of Safety helmet",
 				"5" =>	"Supervisor to enforce all workers are using safety glassess",
 	),
+	"w_a_h_t" => array(
+				"0" =>	"Set up traffic cones and barrier to demarcate work area",
+				"0" =>	"Set up warning signs to warn others of the work ahead",
+				"0" =>	"Traffic controller to slow down traffic or redirect traffic",
+				"0" =>	"Hoard up unloading area and redirect traffic",
+				"0" =>	"Brief on the risk assessment and SWP",
+				"0" =>	"Use of truck mounted attenuator to prevent vehicle from crashing into work area",
+				"0" =>	"Use of traffic mannequin to slow others",
+				"0" =>	"Working personnel to put on reflective vest at all time",
+				"0" =>	"Put up the warning signs according to the road closure permit",
+	)
 	"other" => array()
 );
