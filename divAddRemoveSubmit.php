@@ -552,13 +552,7 @@ alert(attrName);
                     <div class="col-sm-6">
                         <label class="col-sm-4">RA Members:</label>
                         <label class="col-sm-8">
-                        <?php /*?><input  name="RA_Member[]" class="span4" type="text" id="inputSaving" placeholder=""><?php */?>
-                        <select name="RA_Member[]" class="span4" id="inputSaving" required>
-                         <option value="">-- Select RA members --</option>
-                        <option value="name1">W. K. Chan</option>
-                        <option value="name2">Liang Kan Fat</option>
-
-                        </select>
+                        <input  name="RA_Member[]" class="span4" type="text" id="inputSaving" placeholder="">
                         </label>
                     </div>
                     <button class="col-sm-1 btn btn-danger deleteMember">Remove</button>

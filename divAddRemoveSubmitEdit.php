@@ -185,11 +185,7 @@ else
                     <div class="col-sm-6">
                         <label class="col-sm-4">RA Members:</label>
                         <label class="col-sm-8">
-                         <select name="RA_Member[]" class="span4 ra_members" id="inputSaving" required>
-                            <option value="" <?php echo ($valueRAMember['name'] == "")?'selected="selected"' : ''; ?> >-- Select RA members --</option>
-                            <option value="name1" <?php echo ($valueRAMember['name'] == "name1")?'selected="selected"' : ''; ?>>W. K. Chan</option>
-                            <option value="name2" <?php echo ($valueRAMember['name'] == "name2")?'selected="selected"' : ''; ?>>Liang Kan Fat</option>
-                        </select>
+                         <input  name="RA_Member[]" class="span4" type="text" id="inputSaving" placeholder="">
                         </label>
                     </div>
                      <button class="col-sm-1 btn btn-danger deleteMember">Remove</button>
