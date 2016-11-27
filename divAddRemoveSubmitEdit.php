@@ -615,17 +615,8 @@ $cntval = 1;
                                     <div class="col-sm-6">
                                         <label class="col-sm-6">Action Officer:</label>
                                         <?php
-                                        if (in_array($valueActionOfficer['name'],array("name1","name2"))){ ?>
-                                        <select name="actionOfficer[]"   class="col-sm-6 action_officers" >
-                                            <option value="">Select Action Officer</option>
-                                            <option value="name1" <?php echo ($valueActionOfficer['name'] == "name1")?'selected="selected"' : ''; ?>>W. K. Chan</option>
-                                            <option value="name2" <?php echo ($valueActionOfficer['name'] == "name2")?'selected="selected"' : ''; ?>>Liang Kan Fat</option>
-                                        </select>
-                                        <?php
-                                        }
-                                        else {
                                           echo "<input type='text' name='actionOfficer[]' value='".$valueActionOfficer["name"]."'  class='col-sm-6 action_officers' >";
-                                          }?>
+                                        ?>
                                     </div>
                                     <button class="col-sm-1 btn btn-danger deleteActonOfficer" style="margin-left:20px;">Remove</button>
                               </div>
