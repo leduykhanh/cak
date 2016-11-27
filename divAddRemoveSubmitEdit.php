@@ -185,7 +185,7 @@ else
                     <div class="col-sm-6">
                         <label class="col-sm-4">RA Members:</label>
                         <label class="col-sm-8">
-                         <input  name="RA_Member[]" class="span4" type="text" id="inputSaving" placeholder="">
+                         <input  name="RA_Member[]" class="span4" type="text" id="inputSaving" value="<?php echo $valueRAMember["name"]; ?>" placeholder="">
                         </label>
                     </div>
                      <button class="col-sm-1 btn btn-danger deleteMember">Remove</button>
