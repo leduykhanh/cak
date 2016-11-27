@@ -5,30 +5,7 @@ if(!$_SESSION['adminid'])
     ?><script type="text/javascript">window.location.assign("index.php")</script>
     <?php
 }
-$harzard = array(
-	"w_h_l_3m"	=> "Hazard -Working at height (less than 3m)",
-	"w_h_m_3m"	=> "Working at height (more than 3m)",
-	"p_h_s_o"	=> "Physical hazards (sharp objects)",
-	"c_h"		=> "Chemical hazards",
-	"f_o"		=> "Falling objects",
-	"e_h"		=> "Electrical hazard",
-	"e_r_h"		=> "Ergonomic hazards",
-	"s_t_f_h"	=> "Slip,trip fall",
-	"c_s_h" 	=> "Confined space",
-	"f_h"		=> "Fire Hazard",
-	"g_h"		=> "Gas Hazard",
-  "b_w" => "Bad Weather",
-  "w_u_q_t" => "Working/unloading with traffic",
-  "r_d" => "Reckless driving",
-  "h_l_b_m_h" => "Heavy load by manual handling",
-  "m_o_u_g" => "material on uneven ground (collapsing)",
-  "w_a_h_b" => "Working at height (using boomlift)",
-  "w_a_h_s" => "Working at height (using sisscor lift)",
-  "w_a_h_sf" => "Working at height (using scaffold)",
-  "p_p_f_l_o" => "Poor planning for lfting operation",
-  "f_p" => "Flying particles",
-  "other" => "Other"
-);
+include_once 'constant.php';
 ?>
   <style type="text/css">
     body { padding: 10px;}
