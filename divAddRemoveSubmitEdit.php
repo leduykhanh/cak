@@ -135,9 +135,9 @@ else
 
                           <div class="col-sm-6">
 
-                            <label class="col-sm-4">Creation Date:</label>
+                            <label class="col-sm-4">Review Date:</label>
                             <label class="col-sm-8">
-                               <input name="creationDate" class="span4 date" type="text" id="creationDate" placeholder="" required value="<?php echo date('d-m-Y', strtotime($valueRisk['createdDate']));?>"></label>
+                               <input name="revisionDate" class="span4 date" type="text" id="revisionDate" placeholder="" required value="<?php echo date('d-m-Y', strtotime($valueRisk['revisionDate']));?>"></label>
 
 
                             </label>

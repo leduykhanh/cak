@@ -16,9 +16,12 @@ define('NON_ACTIVE', 0);
   $l = 2; //for action officer
   $m = 0; // For other injuries
 
-
+  if(isset($_POST["creationDate"])){
     $creationDates = new DateTime($_POST['creationDate']);
     $creationDate = date_format($creationDates, 'Y-m-d H:i:s'); // 2011-03-03 00:00:00
+  }
+  if (isset($_POST["revisionDate"]))
+      $revisionDate = date_format(new DateTime($_POST['revisionDate']), 'Y-m-d H:i:s');
 
   $today = date('Y-m-d H:i:s');
 
@@ -37,7 +40,7 @@ define('NON_ACTIVE', 0);
 
  if(isset($_GET['riskid']) && $_GET['riskid'] != '')
   {
-      $riskassessment = "UPDATE  `riskassessment` SET  `createdDate` =  '".$creationDate."' ,
+      $riskassessment = "UPDATE  `riskassessment` SET  `revisionDate` =  '".$revisionDate."' ,
       `location` =  '".$_POST['location']."',`process` =  '".$_POST['process']."',
       `expiry_date` =  '".$_POST['expiry_date']."',
       `status` = ".$status."
@@ -73,7 +76,7 @@ define('NON_ACTIVE', 0);
  else
   {
 
-     $riskassessment = "INSERT INTO `riskassessment` (`id`, `createdBy`, `location`, `process`, `createdDate`, `approveDate`, `revisionDate`, `approveBy`, `status`,`expiry_date`) VALUES (NULL, '".$_SESSION['adminid']."', '".$_POST['location']."', '".$_POST['process']."', '".$creationDate."', NULL, NULL, NULL, '".$status."',".$_POST["expiry_date"].");";
+     $riskassessment = "INSERT INTO `riskassessment` (`id`, `createdBy`, `location`, `process`, `createdDate`, `approveDate`, `revisionDate`, `approveBy`, `status`,`expiry_date`) VALUES (NULL, '".$_SESSION['adminid']."', '".$_POST['location']."', '".$_POST['process']."', '".$creationDate."', NULL, '".$creationDate."', NULL, '".$status."',".$_POST["expiry_date"].");";
       $insert_riskassessment=mysqli_query($con, $riskassessment);
       $riskassessmentId = mysqli_insert_id($con);
       // echo $riskassessment;
