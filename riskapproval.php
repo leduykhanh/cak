@@ -123,7 +123,7 @@ session_start();
       //so we use the MD5 algorithm to generate a random hash
       $random_hash = md5(time());
       //define the headers we want passed. Note that they are separated with \r\n
-      $headers = "From: casey.lim@cak-fg.com.sg\r\nReply-To: casey.lim@cak-fg.com.sg";
+      $headers = "From: suresh@cak-fg.com.sg\r\nReply-To: suresh@cak-fg.com.sg";
       //add boundary string and mime type specification
       $headers .= "\r\nContent-Type: multipart/alternative; boundary=\"PHP-alt-".$random_hash."\"";
       //define the body of the message.

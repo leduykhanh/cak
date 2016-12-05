@@ -15,7 +15,7 @@ define('NON_ACTIVE', 0);
   $k = 1; // this is for keep track of j and loop from next level
   $l = 2; //for action officer
   $m = 0; // For other injuries
-
+  $revisionDate = null;
   if(isset($_POST["creationDate"])){
     $creationDates = new DateTime($_POST['creationDate']);
     $creationDate = date_format($creationDates, 'Y-m-d H:i:s'); // 2011-03-03 00:00:00
@@ -40,7 +40,7 @@ define('NON_ACTIVE', 0);
 
  if(isset($_GET['riskid']) && $_GET['riskid'] != '')
   {
-      $riskassessment = "UPDATE  `riskassessment` SET  `revisionDate` =  '".$revisionDate."' ,
+      $riskassessment = "UPDATE  `riskassessment` SET  `revisionDate` =  '".$revisionDate."' ,`createdDate` =  '".$createdDate."' ,
       `location` =  '".$_POST['location']."',`process` =  '".$_POST['process']."',
       `expiry_date` =  '".$_POST['expiry_date']."',
       `status` = ".$status."

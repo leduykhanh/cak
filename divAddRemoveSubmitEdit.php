@@ -134,14 +134,27 @@ else
                           </div>
 
                           <div class="col-sm-6">
-
+                          <?php if ($valueRisk["status"] =="2") { ?>
                             <label class="col-sm-4">Review Date:</label>
                             <label class="col-sm-8">
-                               <input name="revisionDate" class="span4 date" type="text" id="revisionDate" placeholder="" required value="<?php echo date('d-m-Y', strtotime($valueRisk['revisionDate']));?>"></label>
-
+                               <input name="revisionDate" class="span4 date" type="text" id="revisionDate" placeholder="" required value="<?php echo date('d-m-Y', strtotime($valueRisk['revisionDate']));?>">
+                               <input name="revisionDate" class="span4 date" type="hidden" id="createdDate" placeholder="" required value="<?php echo date('d-m-Y', strtotime($valueRisk['createdDate'])));?>"></label>
 
                             </label>
 
+
+                            
+                            <?php } 
+                            else {
+                              ?>
+                              <label class="col-sm-4">Criation Date:</label>
+                            <label class="col-sm-8">
+                               <input name="createdDate" class="span4 date" type="text" id="createdDate" placeholder="" required value="<?php echo date('d-m-Y', strtotime($valueRisk['createdDate']));?>"></label>
+
+
+                            
+                            <?php  
+                            } ?>
                           </div>
                 </div>
 
