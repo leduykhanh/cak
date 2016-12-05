@@ -16,10 +16,8 @@ define('NON_ACTIVE', 0);
   $l = 2; //for action officer
   $m = 0; // For other injuries
   $revisionDate = null;
-  if(isset($_POST["creationDate"])){
-    $creationDates = new DateTime($_POST['creationDate']);
-    $creationDate = date_format($creationDates, 'Y-m-d H:i:s'); // 2011-03-03 00:00:00
-  }
+  $creationDates = new DateTime($_POST['creationDate']);
+  $creationDate = date_format($creationDates, 'Y-m-d H:i:s'); // 2011-03-03 00:00:00
   if (isset($_POST["revisionDate"]))
       $revisionDate = date_format(new DateTime($_POST['revisionDate']), 'Y-m-d H:i:s');
 
@@ -31,7 +29,7 @@ define('NON_ACTIVE', 0);
   }
   else if($_POST['saveAsDraft'] == 'Next')
   {
-      $status = 0;
+      $status = $revisionDate?2:0;
   }
   else
   {
@@ -45,7 +43,7 @@ define('NON_ACTIVE', 0);
       if($revisionDate){
         $set_clause = $set_clause."`revisionDate` =  '".$revisionDate."' ,`approveDate` =  '".$revisionDate."' ,";
       }
-      $riskassessment = "UPDATE  `riskassessment` SET  " .$set_clause. "`createdDate` =  '".$createdDate."' ,
+      $riskassessment = "UPDATE  `riskassessment` SET  " .$set_clause. "`createdDate` =  '".$creationDate."' ,
       `location` =  '".$_POST['location']."',`process` =  '".$_POST['process']."',
       `expiry_date` =  '".$_POST['expiry_date']."',
       `status` = ".$status."
@@ -180,7 +178,7 @@ if(isset($insertHazardsId))
 
   if($_POST['saveAsDraft'] == 'Next')
   {
-     echo "<script>window.open('riskapproval.php?riskId=".$riskassessmentId."','_self')</script>";
+    echo "<script>window.open('riskapproval.php?riskId=".$riskassessmentId."','_self')</script>";
   }
   else
   {
