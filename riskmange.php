@@ -39,8 +39,13 @@ define('NON_ACTIVE', 0);
   }
 
  if(isset($_GET['riskid']) && $_GET['riskid'] != '')
+
   {
-      $riskassessment = "UPDATE  `riskassessment` SET  `revisionDate` =  '".$revisionDate."' ,`createdDate` =  '".$createdDate."' ,
+      $set_clause = "";
+      if($revisionDate){
+        $set_clause = $set_clause."`revisionDate` =  '".$revisionDate."' ,`approveDate` =  '".$revisionDate."' ,";
+      }
+      $riskassessment = "UPDATE  `riskassessment` SET  " .$set_clause. "`createdDate` =  '".$createdDate."' ,
       `location` =  '".$_POST['location']."',`process` =  '".$_POST['process']."',
       `expiry_date` =  '".$_POST['expiry_date']."',
       `status` = ".$status."
