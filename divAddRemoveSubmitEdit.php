@@ -147,7 +147,7 @@ else
                             <?php } 
                             else {
                               ?>
-                              <label class="col-sm-4">Criation Date:</label>
+                              <label class="col-sm-4">Creation Date:</label>
                             <label class="col-sm-8">
                                <input name="createdDate" class="span4 date" type="text" id="createdDate" placeholder="" required value="<?php echo date('d-m-Y', strtotime($valueRisk['createdDate']));?>"></label>
 
