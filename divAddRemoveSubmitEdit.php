@@ -138,7 +138,7 @@ else
                             <label class="col-sm-4">Review Date:</label>
                             <label class="col-sm-8">
                                <input name="revisionDate" class="span4 date" type="text" id="revisionDate" placeholder="" required value="<?php echo date('d-m-Y', strtotime($valueRisk['revisionDate']));?>">
-                               <input name="revisionDate" class="span4 date" type="hidden" id="createdDate" placeholder="" required value="<?php echo date('d-m-Y', strtotime($valueRisk['createdDate'])));?>"></label>
+                               <input name="revisionDate" class="span4 date" type="hidden" id="createdDate" placeholder="" required value="<?php echo date('d-m-Y', strtotime($valueRisk['createdDate']));?>"></label>
 
                             </label>
 
