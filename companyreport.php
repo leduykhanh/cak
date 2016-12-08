@@ -219,7 +219,7 @@ td p{
                     <td rowspan="3" colspan="1" style="width:15%;vertical-align: middle;">
                     <?php if($risk['status'] ==2)
                         {
-							echo '<img width="120" src="staff/'.$signee["signature"].'"/>';
+							//echo '<img width="120" src="staff/'.$signee["signature"].'"/>';
 						}
 						?>
                      </td>
@@ -296,7 +296,7 @@ td p{
                      </td>
                      <td rowspan="1" colspan="1" style="width:25%">RA Member 5:<?php $raMember = mysqli_fetch_assoc($resultlRAMember); echo $raMember['name'];?></td>
                      <td rowspan="1" colspan="1" style="width:15%">Date:</td>
-                     <td rowspan="1" colspan="1" style="width:15%"><?php echo $today;?></td>
+                     <td rowspan="1" colspan="1" style="width:15%"><?php echo date('d-m-Y', strtotime($risk['approveDate']));?></td>
                 </tr>
 
 
