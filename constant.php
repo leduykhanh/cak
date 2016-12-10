@@ -14,7 +14,7 @@ $raSinatures = array(
 	"name2" => "fat.png",
 );
 $harzard = array(
-	"w_h_l_3m"	=> "Hazard -Working at height (less than 3m)",
+	"w_h_l_3m"	=> "Working at height (less than 3m)",
 	"w_h_m_3m"	=> "Working at height (more than 3m)",
 	"p_h_s_o"	=> "Physical hazards (sharp objects)",
 	"c_h"		=> "Chemical hazards",
