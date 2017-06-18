@@ -143,7 +143,7 @@ session_start();
 
       Please click on the link below to approve the Risk assessment.
 
-      Site link : http://jangkoo.com/projects/cak/
+      Site link : https://qesafety.com/autora/cak/
 
       User name : <?php echo $staffName['email'];?>
 
